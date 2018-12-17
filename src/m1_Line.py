@@ -379,7 +379,7 @@ class Line(object):
         placeHolder = self.start
         self.start = self.end
         self.end = placeHolder
-        return(self.start, self.end)
+        return (self.start, self.end)
 
     def slope(self):
         """
@@ -416,11 +416,10 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        if (self.end.x - self.start.x)==0:
+        if (self.end.x - self.start.x) == 0:
             return (math.inf)
         else:
-            return ((self.end.y - self.start.y)/(self.end.x - self.start.x))
-
+            return ((self.end.y - self.start.y) / (self.end.x - self.start.x))
 
     def length(self):
         """
@@ -454,7 +453,7 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        return (((self.start.x-self.end.x)**2+(self.start.y-self.end.y)**2)**(1/2))
+        return (((self.start.x - self.end.x) ** 2 + (self.start.y - self.end.y) ** 2) ** (1 / 2))
 
     def get_number_of_clones(self):
         """
@@ -530,9 +529,9 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        s = Point(self.start.x + other_line.start.x, self.start.y +other_line.start.y)
-        e = Point(self.end.x + other_line.end.x, self.end.y +other_line.end.y)
-        return(Line(s, e))
+        s = Point(self.start.x + other_line.start.x, self.start.y + other_line.start.y)
+        e = Point(self.end.x + other_line.end.x, self.end.y + other_line.end.y)
+        return (Line(s, e))
 
     def line_minus(self, other_line):
         """
@@ -597,7 +596,7 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        return (Point(self.end.x/2 + self.start.x/2, self.end.y/2 + self.start.y/2))
+        return (Point(self.end.x / 2 + self.start.x / 2, self.end.y / 2 + self.start.y / 2))
 
     def is_parallel(self, line2):
         """
